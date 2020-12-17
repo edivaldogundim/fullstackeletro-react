@@ -5,12 +5,10 @@ abstract class Connect
     protected static function getDb()
     {
 
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $database = "fseletro";
-    
-    $conn = mysqli_connect($servername, $username, $password, $database);
+        $conn = new PDO("mysql:host=localhost;dbname=fseletro;charset=utf8",
+        "root",
+        ""
+        );
 
         if ($conn) {
             return $conn;

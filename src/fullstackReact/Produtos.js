@@ -44,14 +44,13 @@ class Produtos extends React.Component {
     }
 
     return(
-
+       
         <div>
-            
-            <header>
+    <header>
 
     <div class="container-fluid bg-danger">
       <nav class="nav nav-pills nav-fill ">
-         <a class="nav-item nav-link" href="Index"><img width="100px" src={logo} alt="Full Stack Eletro"></a>
+         <a class="nav-item nav-link" href="Index"><img width="100px" src={logo} alt="Full Stack Eletro"/></a>
          <a class="nav-item nav-link text-white" href="Produtos">Produtos</a>
          <a class="nav-item nav-link text-white" href="Loja">Nossas lojas</a>
          <a class="nav-item nav-link text-white" href="Contato">Fale conosco</a>
@@ -61,30 +60,30 @@ class Produtos extends React.Component {
 </header>
             <div className="categoriaprodutos">
                
-                <h1>Nossos produtos</h1>
+            <h1>Nossos produtos</h1>
                 
                
-                <h4>Categorias</h4>
+        <h4>Categorias</h4>
                 
-                <nav className="nav">
-                    <ul className="list-group">
-                        <li className="list-group-item border-0 p-1">
-                            <button className="list-group-item list-group-item-action border-0 p-1" href="#"  onClick={exibir_todos}>Todos (12)</button>
-                        </li>
-                        <li className="list-group-item border-0 p-1">
-                            <button className="list-group-item list-group-item-action border-0 p-1" href="#" onClick={() => exibir_categorias('geladeira')}>Geladeiras (3)</button>
-                        </li>
-                        <li className="list-group-item border-0 p-1">
-                            <button className="list-group-item list-group-item-action border-0 p-1" href="#" onClick={() => exibir_categorias('fogao')}>Fogões (2)</button>
-                        </li>
-                        <li className="list-group-item border-0 p-1">
-                            <button className="list-group-item list-group-item-action border-0 p-1" href="#" onClick={() => exibir_categorias('microondas')}>Microondas (3)</button>
-                        </li>
-                        <li className="list-group-item border-0 p-1"> 
-                            <button className="list-group-item list-group-item-action border-0 p-1" href="#"  onClick={() => exibir_categorias('lavadouraderoupa')}>Lavadora de roupas (2)</button>
-                        </li>
-                        <li className="list-group-item border-0 p-1">
-                            <button className="list-group-item list-group-item-action border-0 p-1" href="#" onClick={() => exibir_categorias('lavaloucas')}>Lava-louças (2)</button>
+        <nav className="nav">
+                <ul className="list-group">
+                    <li className="list-group-item border-0 p-1">
+                    <button className="list-group-item list-group-item-action border-0 p-1" href="#"  onClick={exibir_todos}>Todos (12)</button>
+                    </li>
+                    <li className="list-group-item border-0 p-1">
+                    <button className="list-group-item list-group-item-action border-0 p-1" href="#" onClick={() => exibir_categorias('geladeira')}>Geladeiras (3)</button>
+                    </li>
+                    <li className="list-group-item border-0 p-1">
+                    <button className="list-group-item list-group-item-action border-0 p-1" href="#" onClick={() => exibir_categorias('fogao')}>Fogões (2)</button>
+                    </li>
+                    <li className="list-group-item border-0 p-1">
+                    <button className="list-group-item list-group-item-action border-0 p-1" href="#" onClick={() => exibir_categorias('microondas')}>Microondas (3)</button>
+                    </li>
+                    <li className="list-group-item border-0 p-1"> 
+                    <button className="list-group-item list-group-item-action border-0 p-1" href="#"  onClick={() => exibir_categorias('lavadouraderoupa')}>Lavadora de roupas (2)</button>
+                    </li>
+                    <li className="list-group-item border-0 p-1">
+                    <button className="list-group-item list-group-item-action border-0 p-1" href="#" onClick={() => exibir_categorias('lavaloucas')}>Lava-louças (2)</button>
                         </li>
                     </ul>
                 </nav>

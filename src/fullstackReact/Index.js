@@ -5,13 +5,12 @@ import logo from './logo.png';
 
    render() {
       return (
-
          <div>
          <header>
  
    <div class="container-fluid bg-danger">
       <nav class="nav nav-pills nav-fill ">
-         <a class="nav-item nav-link" href="Index"><img width="100px" src={logo} alt="Full Stack Eletro"></a>
+         <a class="nav-item nav-link" href="Index"><img width="100px" src={logo} alt="Full Stack Eletro"/></a>
          <a class="nav-item nav-link text-white" href="Produtos">Produtos</a>
          <a class="nav-item nav-link text-white" href="Loja">Nossas lojas</a>
          <a class="nav-item nav-link text-white" href="Contato">Fale conosco</a>
