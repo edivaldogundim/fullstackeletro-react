@@ -1,10 +1,10 @@
  <?php
 
-require_once("./Connection.php");
+require_once("./connect.php");
 
-class Content extends Connection{
+class Content extends Connect{
     public static function getAll() {
-        $conn = Connection::getDb();
+        $conn = Connect::getDb();
 
         $i = 0;
 

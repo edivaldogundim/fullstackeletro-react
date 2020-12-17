@@ -1,10 +1,11 @@
 
 import React from 'react';
-import Zap from './Zap.jpg';
+import logo from './logo.png';
+import whats from './whats.jpg';
 import Email from './Email.png';
 import {useState, useEffect} from 'react'; 
-// class Formulario extends React.Component {
-   function Navegacao(){
+
+   function Contato(){
       const [mensagens, setMensagens ] = useState([]);
       const [render, setRender] = useState(false);
       const [msg, setMsg] = useState(false);
@@ -23,7 +24,7 @@ import {useState, useEffect} from 'react';
             
             let formData = new FormData(event.target);
             
-            const url = "http://localhost/backend/Enviomensagem.php";
+            const url = "http://localhost/backend/mensagem.php";
 
             fetch(url, {
                method: "POST",
@@ -43,13 +44,14 @@ import {useState, useEffect} from 'react';
          <div>
             <header>
  
-            <div className="navbar container-fluid">
-               <a className="link" href="Navegacao">FullStack Eletro</a>
-               <a className="link" href="Produtos">Produto</a>
-               <a className="link" href="Pedido">Pedido</a>
-               <a className="link" href="Endereço">Loja</a>
-               <a className="link" href="Formulario">Contato</a>
-            </div>
+   <div class="container-fluid bg-danger">
+      <nav class="nav nav-pills nav-fill ">
+         <a class="nav-item nav-link" href="Index"><img width="100px" src={logo} alt="Full Stack Eletro"></a>
+         <a class="nav-item nav-link text-white" href="Produtos">Produtos</a>
+         <a class="nav-item nav-link text-white" href="Loja">Nossas lojas</a>
+         <a class="nav-item nav-link text-white" href="Contato">Fale conosco</a>
+      </nav>
+   </div>
 
 </header>
          <div className="container titulo-contato">
@@ -57,22 +59,22 @@ import {useState, useEffect} from 'react';
             <h1>Contato</h1>
 
          </div>
-            <div onSubmit={envioMensagem} className="container">
+            <div  className="container">
                <div class="row ml-5">
-                  <img src={Email} alt="Email" className="logocontato" />
+                  <img src={Email} alt="Email" width="50px"/>
                   <div className="col">contato@fullstackeletro.com</div>
 
-                  <img src={Zap} alt="Zap" className="logocontato" />
-                  <div className="col">11 99999-9999</div>
+                  <img src={whats} alt="whats" width="50px"/>
+                  <div className="col"> 99999-9999</div>
                </div><br ></br>
 
-               <div className="col">
-                  <div className="input-group">
+               <div onSubmit={envioMensagem} class="col">
+                  <div class="input-group">
                      <form>
                         <label for="Nome">Nome</label>
-                        <input type="text" className="form-control w-400 px-2" name="nome" placeholder="digite seu nome"></input><br />
-                        <label for="Mensagem">Mensagem</label>
-                        <input type="Mensagem" className="form-control w-400 px-2" name="mensagem" placeholder="digite seu email"></input><br />
+                        <input type="text" className="form-control w-400 px-2" name="nome" placeholder="Nome..."></input><br />
+                        <label for="msg">Mensagem</label>
+                        <input type="msg" className="form-control w-400 px-2" name="msg" placeholder="Digite sua mensagem..."></input><br />
                         <button type="submit" class="btn btn-danger  m-1">Enviar</button>
                      </form>
                   </div>
@@ -81,7 +83,7 @@ import {useState, useEffect} from 'react';
           
         {    
             msg && <div className="alert alert-success mx-auto mt-4 w-75" role="alert">
-              Agradecemos por sua mensagem!
+              Mensagem recebida, e enviada para apuração!
             </div>
           }
 
@@ -100,7 +102,7 @@ import {useState, useEffect} from 'react';
                                       Nome: {item.nome}
                                   </div>
                                   <div>
-                                      Cliente {item.nome} escreveu: {item.mensagem}
+                                      Mensagem: {item.mensagem}
                                   </div>
                                   <br/><br/>
                               </div>
@@ -114,4 +116,4 @@ import {useState, useEffect} from 'react';
  }
 
 
-export default Navegacao;
+export default Contato;

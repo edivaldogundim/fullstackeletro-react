@@ -1,5 +1,5 @@
 <?php
-    require_once "./Backend/Api.php";
+    require_once "./backend/Api.php";
     
     class Mensagem{
         public $nome; 
@@ -17,7 +17,7 @@
         {
             $conn = Connection::getDb();
     
-            $inserirDados = $conn->query("INSERT INTO usuarios (nome, mensagem) VALUES ('$this->nome', '$this->mensagem')");                      
+            $inserirDados = $conn->query("INSERT INTO comentarios (nome, mensagem) VALUES ('$this->nome', '$this->msg')");                      
             
             if ($inserirDados->rowCount() > 0) {
                 return true;

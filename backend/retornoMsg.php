@@ -1,8 +1,8 @@
 <?php
-    require_once "./Backend/Api.php";
+    require_once "./backend/connect.php";
     
 
-    $result = query('SELECT * FROM usuarios');
+    $result = query('SELECT * FROM comentarios');
     $mensagens=[];
 
     while($row=mysqli_fetch_assoc($result)){
